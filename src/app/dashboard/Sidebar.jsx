@@ -1,3 +1,4 @@
+import NavLink from '@/components/NavLink';
 import Link from 'next/link';
 import React from 'react';
 
@@ -31,7 +32,7 @@ const Sidebar = () => {
                         key={path}
                         className='my-2'
                     >
-                        <Link href={path}>{title}</Link>
+                        <NavLink exact activeClassName="bg-green-500 text-white" href={path}>{title}</NavLink>
                     </li>)
                 }
             </ul>

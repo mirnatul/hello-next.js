@@ -1,8 +1,12 @@
 import Navbar from '@/components/Navbar'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ["100", "400", "500", "700"],
+  variable: '--font-roboto'
+})
 
 export const metadata = {
   title: 'Hello Next.js',
@@ -20,7 +24,8 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      {/* <body className={roboto.className}> */}
+      <body className={`${roboto.variable} font-roboto`}>
         {/* <nav>
           <a href="">Home</a>
           <a href="">About</a>

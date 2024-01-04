@@ -47,13 +47,13 @@ const page = () => {
                     <Link
                         className='block border border-blue-500 my-6 p-8'
                         key={id}
-                    // href={`/blogs/${year}/${id}`}
-                    // href={{
-                    //     pathname: `/blogs/${year}/${id}`,
-                    //     query: {
-                    //         title: title
-                    //     }
-                    // }}
+                        // href={`/blogs/${year}/${id}`}
+                        href={{
+                            pathname: `/blogs/${year}/${id}`,
+                            query: {
+                                title: title
+                            }
+                        }}
                     // onClick={() => router.push(`/blogs/${year}/${id}?title=${title}`)}
                     >
                         {title}

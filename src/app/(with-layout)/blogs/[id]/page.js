@@ -1,6 +1,29 @@
+import loadBlogData from '@/utils/loadBlogData';
 import loadSingleBlogData from '@/utils/loadSingleBlogData';
 import { useParams, useSearchParams } from 'next/navigation';
 import React from 'react';
+
+
+export const generateMetadata = async ({ params }) => {
+
+    const blog = await loadSingleBlogData(params.id)
+
+    return {
+        title: blog.title
+    }
+}
+
+// for static generate
+
+// export const generateStaticParams = async () => {
+//     const blogs = await loadBlogData();
+
+//     return blogs.map((blog) => ({
+//         id: blog.id.toString()
+//     }))
+// }
+
+
 
 const SingleBlog = async ({ params }) => {
 

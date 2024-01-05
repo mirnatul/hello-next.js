@@ -15,13 +15,13 @@ export const generateMetadata = async ({ params }) => {
 
 // for static generate
 
-// export const generateStaticParams = async () => {
-//     const blogs = await loadBlogData();
+export const generateStaticParams = async () => {
+    const blogs = await loadBlogData();
 
-//     return blogs.map((blog) => ({
-//         id: blog.id.toString()
-//     }))
-// }
+    return blogs.map((blog) => ({
+        id: blog.id.toString()
+    }))
+}
 
 
 

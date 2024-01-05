@@ -1,5 +1,6 @@
 // 'use client'
 
+import loadBlogData from '@/utils/loadBlogData';
 import Link from 'next/link';
 // import { useRouter } from 'next/navigation';
 import React from 'react';
@@ -36,10 +37,17 @@ export const metadata = {
 
 const BlogPage = async () => {
 
-    const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-        cache: "force-cache"
-    });
-    const blogs = await res.json();
+
+    // ----------------------------------------------------------------------------------
+    // we will no do that
+    // const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    //     cache: "force-cache"
+    // });
+    // const blogs = await res.json();
+
+    // instead do this
+    const blogs = await loadBlogData();
+    // ---------------------------------------------------------------------------------
 
     // const router = useRouter(); // import from navigation
 
